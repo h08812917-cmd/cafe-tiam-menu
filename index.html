@@ -1,183 +1,405 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منوی دیجیتال کافه تیام</title>
 
-  <title>کافه تیام | منوی دیجیتال</title>
+<style>
+*{
+  box-sizing:border-box;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+body{
+  margin:0;
+  background:#f7fbfa;
+  color:#172321;
+  font-family:Tahoma, Arial, sans-serif;
+}
 
-    body {
-      margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background: #f5efe6;
-      color: #2d2119;
-    }
+.container{
+  max-width:720px;
+  margin:auto;
+  padding:16px;
+}
 
-    header {
-      background: #241812;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
+.header{
+  background:linear-gradient(135deg,#087c78,#0e9a94);
+  color:white;
+  border-radius:28px;
+  padding:30px 22px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-    }
+.logo{
+  font-size:38px;
+}
 
-    header p {
-      margin: 0;
-      color: #d8c6b2;
-      font-size: 15px;
-    }
+.title{
+  font-size:30px;
+  font-weight:bold;
+  margin-top:8px;
+}
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 25px 15px 50px;
-    }
+.english{
+  color:#f0d28b;
+  font-size:12px;
+  letter-spacing:4px;
+  margin-top:7px;
+}
 
-    .category {
-      margin-top: 30px;
-    }
+.subtitle{
+  font-size:13px;
+  margin-top:14px;
+  color:#e7f5f3;
+}
 
-    .category h2 {
-      border-bottom: 2px solid #9b7653;
-      padding-bottom: 10px;
-      font-size: 23px;
-    }
+.menu-nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:14px 2px;
+  position:sticky;
+  top:0;
+  background:rgba(247,251,250,.94);
+  z-index:10;
+}
 
-    .item {
-      background: white;
-      border-radius: 14px;
-      padding: 16px;
-      margin: 12px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-    }
+.menu-nav a{
+  white-space:nowrap;
+  text-decoration:none;
+  color:#087c78;
+  background:white;
+  border:1px solid #dce8e5;
+  border-radius:30px;
+  padding:9px 13px;
+  font-size:12px;
+}
 
-    .item-name {
-      font-weight: bold;
-      font-size: 17px;
-    }
+.section{
+  margin-top:20px;
+}
 
-    .item-description {
-      color: #777;
-      font-size: 13px;
-      margin-top: 5px;
-    }
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
 
-    .price {
-      font-weight: bold;
-      color: #8b5e34;
-      white-space: nowrap;
-      margin-right: 15px;
-    }
+.icon{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#dff3f0;
+  border-radius:14px;
+  font-size:21px;
+}
 
-    footer {
-      text-align: center;
-      background: #241812;
-      color: #d8c6b2;
-      padding: 25px;
-      font-size: 13px;
-    }
-  </style>
+.section-title h2{
+  margin:0;
+  font-size:19px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e0e8e5;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:15px;
+  border-bottom:1px solid #edf1ef;
+}
+
+.item:last-child{
+  border-bottom:none;
+}
+
+.name{
+  font-size:14px;
+  font-weight:bold;
+}
+
+.price{
+  color:#087c78;
+  font-size:13px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.no-price{
+  color:#999;
+  font-size:11px;
+  font-weight:normal;
+}
+
+.footer{
+  margin-top:25px;
+  background:#172321;
+  color:white;
+  border-radius:22px;
+  text-align:center;
+  padding:20px;
+}
+
+.footer strong{
+  color:#e0bd67;
+  font-size:20px;
+}
+
+.footer p{
+  color:#cbd8d5;
+  font-size:11px;
+  margin-bottom:0;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>کافه تیام</h1>
-    <p>منوی دیجیتال</p>
-  </header>
+<div class="container">
 
-  <main class="container">
+<header class="header">
+  <div class="logo">☕</div>
+  <div class="title">کافه تیام</div>
+  <div class="english">CAFE TIAM</div>
+  <div class="subtitle">یک فنجان آرامش، برای لحظه‌های خوب شما</div>
+</header>
 
-    <section class="category">
-      <h2>☕ قهوه گرم</h2>
+<nav class="menu-nav">
+  <a href="#hot">قهوه گرم</a>
+  <a href="#cold">قهوه سرد</a>
+  <a href="#warm">نوشیدنی گرم</a>
+  <a href="#tea">چای و دمنوش</a>
+  <a href="#simple">نوشیدنی سرد</a>
+</nav>
 
-      <div class="item">
-        <div>
-          <div class="item-name">اسپرسو</div>
-          <div class="item-description">قهوه خالص و غلیظ</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+<section class="section" id="hot">
+  <div class="section-title">
+    <div class="icon">☕</div>
+    <h2>قهوه‌های گرم</h2>
+  </div>
 
-      <div class="item">
-        <div>
-          <div class="item-name">آمریکانو</div>
-          <div class="item-description">اسپرسو و آب داغ</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+  <div class="card">
 
-      <div class="item">
-        <div>
-          <div class="item-name">کاپوچینو</div>
-          <div class="item-description">اسپرسو، شیر و فوم شیر</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+    <div class="item">
+      <div class="name">اسپرسو تک</div>
+      <div class="price">۷۵٬۰۰۰ تومان</div>
+    </div>
 
-      <div class="item">
-        <div>
-          <div class="item-name">لاته</div>
-          <div class="item-description">اسپرسو با شیر</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+    <div class="item">
+      <div class="name">اسپرسو دبل</div>
+      <div class="price">۱۰۰٬۰۰۰ تومان</div>
+    </div>
 
-    </section>
+    <div class="item">
+      <div class="name">آمریکانو</div>
+      <div class="price">۱۳۰٬۰۰۰ تومان</div>
+    </div>
 
-    <section class="category">
-      <h2>🧊 نوشیدنی سرد</h2>
+    <div class="item">
+      <div class="name">لاته</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
 
-      <div class="item">
-        <div>
-          <div class="item-name">آیس لاته</div>
-          <div class="item-description">لاته خنک با یخ</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+    <div class="item">
+      <div class="name">کاپوچینو</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
 
-      <div class="item">
-        <div>
-          <div class="item-name">آیس آمریکانو</div>
-          <div class="item-description">آمریکانو خنک با یخ</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+    <div class="item">
+      <div class="name">موکا</div>
+      <div class="price no-price">قیمت</div>
+    </div>
 
-    </section>
+    <div class="item">
+      <div class="name">کارامل ماکیاتو</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
 
-    <section class="category">
-      <h2>🍰 کیک و دسر</h2>
+    <div class="item">
+      <div class="name">قهوه ترک</div>
+      <div class="price no-price">قیمت</div>
+    </div>
 
-      <div class="item">
-        <div>
-          <div class="item-name">کیک روز</div>
-          <div class="item-description">انتخاب روز کافه</div>
-        </div>
-        <div class="price">— تومان</div>
-      </div>
+    <div class="item">
+      <div class="name">قهوه فرانسه</div>
+      <div class="price no-price">قیمت</div>
+    </div>
 
-    </section>
+  </div>
+</section>
 
-  </main>
+<section class="section" id="cold">
+  <div class="section-title">
+    <div class="icon">🧊</div>
+    <h2>قهوه‌های سرد</h2>
+  </div>
 
-  <footer>
-    کافه تیام ❤️
-    <br>
-    از حضورتان خوشحالیم
-  </footer>
+  <div class="card">
+
+    <div class="item">
+      <div class="name">آیس آمریکانو</div>
+      <div class="price">۱۴۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">آیس لاته</div>
+      <div class="price">۱۵۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">آیس موکا</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">آیس کارامل ماکیاتو</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="warm">
+  <div class="section-title">
+    <div class="icon">🍫</div>
+    <h2>نوشیدنی‌های گرم</h2>
+  </div>
+
+  <div class="card">
+
+    <div class="item">
+      <div class="name">هات‌چاکلت</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">هات‌چاکلت ویژه</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">شیرکاکائو</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">چای</div>
+      <div class="price">۳۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">چای ماسالا</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">چای کرک</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">شیر پسته زعفرانی</div>
+      <div class="price">۱۶۰٬۰۰۰ تومان</div>
+    </div>
+
+    <div class="item">
+      <div class="name">عصاره زنجبیل</div>
+      <div class="price">۱۲۰٬۰۰۰ تومان</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="tea">
+  <div class="section-title">
+    <div class="icon">🍵</div>
+    <h2>چای و دمنوش</h2>
+  </div>
+
+  <div class="card">
+
+    <div class="item">
+      <div class="name">چای سیاه</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">چای سبز</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">دمنوش گل‌گاوزبان</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">دمنوش به‌لیمو</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">دمنوش نعناع</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">دمنوش مخصوص</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="simple">
+  <div class="section-title">
+    <div class="icon">🥤</div>
+    <h2>نوشیدنی‌های سرد ساده</h2>
+  </div>
+
+  <div class="card">
+
+    <div class="item">
+      <div class="name">آب معدنی</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">نوشابه</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">ماءالشعیر</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+    <div class="item">
+      <div class="name">آبمیوه‌های آماده</div>
+      <div class="price no-price">قیمت</div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <strong>TIAM</strong>
+  <p>ممنون که کافه تیام را برای لحظه‌های خوبتان انتخاب می‌کنید ☕</p>
+</footer>
+
+</div>
 
 </body>
 </html>
